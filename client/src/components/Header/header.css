@@ -2,7 +2,7 @@
   background-color: black;
   display: flex;
   height: 100vh;
-  padding-right: 0px;
+  /* padding: 0px; */
 }
 
 #headerLinks {
