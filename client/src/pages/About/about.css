@@ -1,11 +1,28 @@
 #content {
-  align-items: center;
+  align-self: center;
   color: black;
+}
+
+#contentCol {
   display: flex;
-  height: 100%;
+  height: 100vh;
 }
 
 #page {
   margin: 0px;
   padding: 0px 0px 0px 50px;
+}
+
+#selfPic {
+  margin-right: 15px;
+  width: 256px;
+}
+
+@media (max-width: 959px) {
+  #page {
+    max-width: 100%;
+  }
+  #selfPic {
+    width: 128px;
+  }
 }
