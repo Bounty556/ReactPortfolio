@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import Footer from '../Footer';
+
 import './header.css';
 
 // The header will actually be a column that goes across the left side of
@@ -71,6 +73,7 @@ function Header() {
           }
         })}
       </div>
+      <Footer />
     </nav>
   );
 }
