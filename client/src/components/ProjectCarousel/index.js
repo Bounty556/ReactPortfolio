@@ -2,25 +2,78 @@ import React, { useState } from 'react';
 
 import './projectCarousel.css';
 
+// Custom carousel that shows icons for the current project and the previous
+// and next projects. Has dots underneath to navigate quicker, as well as
+// next and previous buttons
 function ProjectCarousel() {
-  const [projects] = useState({});
+  const [currentProject, setCurrentProject] = useState(0);
+  const [projects] = useState([
+    {
+      title: 'Code Quiz',
+      icon: 'codeQuiz.png'
+    },
+    {
+      title: 'Eat Da Burger',
+      icon: 'eatDaBurger.png'
+    },
+    {
+      title: 'Employee Summary',
+      icon: 'employeeSummary.png'
+    }
+  ]);
+
+  const goToRelativeProject = delta => {
+    let tempProject = currentProject + delta;
+
+    while (tempProject >= projects.length) {
+      tempProject -= projects.length;
+    }
+    while (tempProject < 0) {
+      tempProject += projects.length;
+    }
+
+    setCurrentProject(tempProject);
+  };
+
+  const getRelativeProject = delta => {
+    let tempProject = currentProject + delta;
+
+    while (tempProject >= projects.length) {
+      tempProject -= projects.length;
+    }
+    while (tempProject < 0) {
+      tempProject += projects.length;
+    }
+
+    return projects[tempProject];
+  };
 
   return (
     <div className='col-10' id='carouselHeader'>
-      <p>Project Title!</p>
-      <div id='imageHolder'>
-        <img className='sideImage' src='/images/projectIcons/codeQuiz.png' alt='Previous Project' />
-        <img
-          className='mainImage'
-          src='/images/projectIcons/eatDaBurger.png'
-          alt='Current Project'
-        />
-        <img
-          className='sideImage'
-          src='/images/projectIcons/employeeSummary.png'
-          alt='Next Project'
-        />
+      <span class='carousel-control-prev-icon' onClick={() => goToRelativeProject(-1)} />
+      <div id='innerCarousel'>
+        <p>Project Title!</p>
+        <div id='imageHolder'>
+          <img
+            className='sideImage'
+            src={'/images/projectIcons/' + getRelativeProject(-1).icon}
+            alt='Previous Project'
+            onClick={() => goToRelativeProject(-1)}
+          />
+          <img
+            className='mainImage'
+            src={'/images/projectIcons/' + getRelativeProject(0).icon}
+            alt='Current Project'
+          />
+          <img
+            className='sideImage'
+            src={'/images/projectIcons/' + getRelativeProject(1).icon}
+            alt='Next Project'
+            onClick={() => goToRelativeProject(1)}
+          />
+        </div>
       </div>
+      <span class='carousel-control-next-icon' onClick={() => goToRelativeProject(1)} />
     </div>
   );
 }
