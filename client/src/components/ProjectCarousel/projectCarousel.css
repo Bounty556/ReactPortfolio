@@ -16,8 +16,20 @@
   margin: 15px;
 }
 
+#carouselPips {
+  bottom: 2px;
+  position: absolute;
+}
+
+#carouselPips > img {
+  height: 8px;
+  margin: 0px 2px;
+  user-select: none;
+}
+
 #imageHolder > img {
   margin: 0px 5px;
+  user-select: none;
 }
 
 #innerCarousel {

@@ -4,11 +4,16 @@
 }
 
 #currentPage {
+  text-align: center;
+  
+  cursor: default;
+
   background-color: white;
   color: black;
-  text-align: center;
+
   width: 100%;
   line-height: 300%;
+  
   animation-name: expandHighlight;
   animation-duration: 0.3s;
 }

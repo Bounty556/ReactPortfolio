@@ -50,9 +50,9 @@ function ProjectCarousel() {
 
   return (
     <div className='col-10' id='carouselHeader'>
-      <span class='carousel-control-prev-icon' onClick={() => goToRelativeProject(-1)} />
+      <span className='carousel-control-prev-icon' onClick={() => goToRelativeProject(-1)} />
       <div id='innerCarousel'>
-        <p>Project Title!</p>
+        <p>{getRelativeProject(0).title}</p>
         <div id='imageHolder'>
           <img
             className='sideImage'
@@ -72,8 +72,22 @@ function ProjectCarousel() {
             onClick={() => goToRelativeProject(1)}
           />
         </div>
+        <div id='carouselPips'>
+          {projects.map((project, i) => (
+            <img
+              src={
+                i === currentProject
+                  ? '/images/carousel/chosenPip.png'
+                  : '/images/carousel/idlePip.png'
+              }
+              onClick={() => goToRelativeProject(i - currentProject)}
+              alt={'Project number ' + (i + 1)}
+              key={i}
+            />
+          ))}
+        </div>
       </div>
-      <span class='carousel-control-next-icon' onClick={() => goToRelativeProject(1)} />
+      <span className='carousel-control-next-icon' onClick={() => goToRelativeProject(1)} />
     </div>
   );
 }

@@ -14,7 +14,7 @@ function Header() {
   const [links] = useState(() => {
     const tempLinks = [
       {
-        name: 'About Me',
+        name: 'About',
         link: '/'
       },
       {
