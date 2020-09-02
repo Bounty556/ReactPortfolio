@@ -1,8 +1,16 @@
+#currentPage {
+  background-color: white;
+  color: black;
+  text-align: center;
+  width: 100%;
+  line-height: 300%;
+}
+
 #header {
   background-color: black;
   display: flex;
   height: 100vh;
-  /* padding: 0px; */
+  padding: 0px;
 }
 
 #headerLinks {
@@ -13,8 +21,8 @@
 
 #headerLinks > a > p {
   color: white;
-  text-decoration: none;
   text-align: center;
+  text-decoration: none;
   width: 100%;
 }
 

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import './header.css';
 
@@ -9,14 +9,58 @@ import './header.css';
 // On mobile and small browser widths, the header will instead be a thin
 // bar at the top of the page
 function Header() {
-  return <nav className='col-2' id='header'>
-    <div id='headerLinks'>
-      <a href='/'><p>About Me</p></a>
-      <a href='/'><p>Portfolio</p></a>
-      <a href='/'><p>Contact</p></a>
-      <a href='/'><p>Resumé</p></a>
-    </div>
-  </nav>;
+  const [links] = useState(() => {
+    const tempLinks = [
+      {
+        name: 'About Me',
+        link: '/'
+      },
+      {
+        name: 'Portfolio',
+        link: '/Portfolio'
+      },
+      {
+        name: 'Contact',
+        link: '/Contact'
+      },
+      {
+        name: 'Resumé',
+        link: '/',
+        newTab: true
+      }
+    ];
+
+    for (let i = 0; i < tempLinks.length; i++) {
+      if (window.location.pathname.toLowerCase() === tempLinks[i].link.toLowerCase()) {
+        tempLinks[i].currentPage = true;
+        break;
+      }
+    }
+
+    return tempLinks;
+  });
+
+  return (
+    <nav className='col-2' id='header'>
+      <div id='headerLinks'>
+        {links.map((link, i) => {
+          if (link.currentPage) {
+            return (
+              <p id='currentPage' key={i}>
+                {link.name}
+              </p>
+            );
+          } else {
+            return (
+              <a href={link.link} key={i}>
+                <p>{link.name}</p>
+              </a>
+            );
+          }
+        })}
+      </div>
+    </nav>
+  );
 }
 
 export default Header;
