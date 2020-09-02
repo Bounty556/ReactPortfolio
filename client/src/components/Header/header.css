@@ -1,9 +1,16 @@
+@keyframes expandHighlight {
+  from {line-height: 100%;}
+  to {line-height: 300%;}
+}
+
 #currentPage {
   background-color: white;
   color: black;
   text-align: center;
   width: 100%;
   line-height: 300%;
+  animation-name: expandHighlight;
+  animation-duration: 0.3s;
 }
 
 #header {
@@ -29,4 +36,17 @@
 #headerLinks :hover {
   color: #a9a9a9;
   text-decoration: none;
+}
+
+#socialLogos {
+  padding: 2px;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+}
+
+#socialLogos > a > img {
+  width: 24px;
+  height: 24px;
 }

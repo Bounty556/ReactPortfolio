@@ -42,6 +42,18 @@ function Header() {
 
   return (
     <nav className='col-2' id='header'>
+      <div id='socialLogos'>
+        <a href='https://github.com/Bounty556' target='_blank' rel='noopener noreferrer'>
+          <img src='/images/logos/github.png' alt='Github Logo' />
+        </a>
+        <a
+          href='https://www.linkedin.com/in/jacob-p-893aa4134/'
+          target='_blank'
+          rel='noopener noreferrer'
+        >
+          <img src='/images/logos/linkedIn.png' alt='LinkedIn Logo' />
+        </a>
+      </div>
       <div id='headerLinks'>
         {links.map((link, i) => {
           if (link.currentPage) {
