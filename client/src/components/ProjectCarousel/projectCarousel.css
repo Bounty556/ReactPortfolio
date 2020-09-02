@@ -1,0 +1,28 @@
+#carouselHeader {
+  background-color: black;
+  
+  padding: 0px;
+  
+  height: 128px;
+  width: 100%;
+
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#carouselHeader > p {
+  color: white;
+  font-family: 'Roboto', cursive;
+  line-height: 50%;
+  margin-top: -15px;
+}
+
+.sideImage {
+  height: 64px;
+}
+
+.mainImage {
+  height: 72px;
+}
