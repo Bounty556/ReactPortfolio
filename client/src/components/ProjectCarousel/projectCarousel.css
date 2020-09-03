@@ -17,7 +17,7 @@
 }
 
 #carouselPips {
-  bottom: 2px;
+  top: 102px;
   position: absolute;
 }
 
@@ -46,6 +46,12 @@
   font-family: 'Roboto', cursive;
   line-height: 50%;
   margin-top: -15px;
+}
+
+#portfolio {
+  padding: 0px;
+
+  width: 100%
 }
 
 .sideImage {

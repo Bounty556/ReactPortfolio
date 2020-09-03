@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 
+import Project from '../Project';
+import ProjectInfo from './projectInfo';
+
 import './projectCarousel.css';
 
 // Custom carousel that shows icons for the current project and the previous
@@ -7,56 +10,7 @@ import './projectCarousel.css';
 // next and previous buttons
 function ProjectCarousel() {
   const [currentProject, setCurrentProject] = useState(0);
-  const [projects] = useState([
-    {
-      title: 'Change of Seasons',
-      icon: 'changeofSeasons.png'
-    },
-    {
-      title: 'Code Quiz',
-      icon: 'codeQuiz.png'
-    },
-    {
-      title: 'Employee Directory',
-      icon: 'employeeDirectory.png'
-    },
-    {
-      title: 'Employee Summary',
-      icon: 'employeeSummary.png'
-    },
-    {
-      title: 'Get Away',
-      icon: 'getAway.png',
-    },
-    {
-      title: 'Password Generator',
-      icon: 'passwordGenerator.png'
-    },
-    {
-      title: 'Poke Build',
-      icon: 'pokeBuild.png',
-    },
-    {
-      title: 'Progressive Budget',
-      icon: 'progressiveBudget.png'
-    },
-    {
-      title: 'React Google Books',
-      icon: 'reactGoogleBooks.png',
-    },
-    {
-      title: 'Readme Generator',
-      icon: 'readmeGenerator.png'
-    },
-    {
-      title: 'Weather Dashboard',
-      icon: 'weatherDashboard.png'
-    },
-    {
-      title: 'Work Scheduler',
-      icon: 'workScheduler.png'
-    }
-  ]);
+  const [projects] = useState(ProjectInfo);
 
   const goToRelativeProject = delta => {
     let tempProject = currentProject + delta;
@@ -85,45 +39,49 @@ function ProjectCarousel() {
   };
 
   return (
-    <div className='col-10' id='carouselHeader'>
-      <span className='carousel-control-prev-icon' onClick={() => goToRelativeProject(-1)} />
-      <div id='innerCarousel'>
-        <p>{getRelativeProject(0).title}</p>
-        <div id='imageHolder'>
-          <img
-            className='sideImage'
-            src={'/images/projectIcons/' + getRelativeProject(-1).icon}
-            alt='Previous Project'
-            onClick={() => goToRelativeProject(-1)}
-          />
-          <img
-            className='mainImage'
-            src={'/images/projectIcons/' + getRelativeProject(0).icon}
-            alt='Current Project'
-          />
-          <img
-            className='sideImage'
-            src={'/images/projectIcons/' + getRelativeProject(1).icon}
-            alt='Next Project'
-            onClick={() => goToRelativeProject(1)}
-          />
-        </div>
-        <div id='carouselPips'>
-          {projects.map((project, i) => (
+    <div className='col-10' id='portfolio'>
+      <div id='carouselHeader'>
+        <span className='carousel-control-prev-icon' onClick={() => goToRelativeProject(-1)} />
+        <div id='innerCarousel'>
+          <p>{getRelativeProject(0).title}</p>
+          <div id='imageHolder'>
             <img
-              src={
-                i === currentProject
-                  ? '/images/carousel/chosenPip.png'
-                  : '/images/carousel/idlePip.png'
-              }
-              onClick={() => goToRelativeProject(i - currentProject)}
-              alt={'Project number ' + (i + 1)}
-              key={i}
+              className='sideImage'
+              src={'/images/projectIcons/' + getRelativeProject(-1).icon}
+              alt='Previous Project'
+              onClick={() => goToRelativeProject(-1)}
             />
-          ))}
+            <img
+              className='mainImage'
+              src={'/images/projectIcons/' + getRelativeProject(0).icon}
+              alt='Current Project'
+            />
+            <img
+              className='sideImage'
+              src={'/images/projectIcons/' + getRelativeProject(1).icon}
+              alt='Next Project'
+              onClick={() => goToRelativeProject(1)}
+            />
+          </div>
+          <div id='carouselPips'>
+            {projects.map((project, i) => (
+              <img
+                src={
+                  i === currentProject
+                    ? '/images/carousel/chosenPip.png'
+                    : '/images/carousel/idlePip.png'
+                }
+                onClick={() => goToRelativeProject(i - currentProject)}
+                alt={'Project number ' + (i + 1)}
+                key={i}
+              />
+            ))}
+          </div>
         </div>
+        <span className='carousel-control-next-icon' onClick={() => goToRelativeProject(1)} />
       </div>
-      <span className='carousel-control-next-icon' onClick={() => goToRelativeProject(1)} />
+
+      <Project project={currentProject} />
     </div>
   );
 }
