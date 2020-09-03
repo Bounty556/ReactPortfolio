@@ -1,31 +1,10 @@
-import React, { useRef } from 'react';
-
-import Mailer from './mailer';
+import React from 'react';
 
 import './contactForm.css';
 
 function ContactForm() {
-  const subject = useRef(null);
-  const email = useRef(null);
-  const message = useRef(null);
-
-  const submitForm = event => {
-    event.preventDefault();
-
-    const subjectText = subject.current.value;
-    const emailText = email.current.value;
-    const messageText = message.current.value;
-    if (subjectText.length > 0 && emailText.length > 0 && messageText.length > 0) {
-      Mailer(subjectText, emailText, messageText);
-
-      subject.current.value = '';
-      email.current.value = '';
-      message.current.value = '';
-    }
-  };
-
   return (
-    <form className='h-100'>
+    <form className='h-100' action='https://formspree.io/mjvaqnay' method='POST'>
       <div className='row h-100 justify-content-center align-items-center'>
         <div className='col-6'>
           <div className='clearfix' id='socialLinks'>
@@ -46,33 +25,15 @@ function ContactForm() {
               <img src='/images/logos/linkedIn.png' alt='LinkedIn Logo' style={{ width: '24px' }} />
             </a>
           </div>
-          <input
-            type='text'
-            className='form-control'
-            id='subjectInput'
-            placeholder='Subject'
-            ref={subject}
-          />
+          <input type='text' className='form-control' placeholder='Your Name' name='name' />
           <input
             type='email'
             className='form-control'
-            id='emailInput'
             placeholder='YourEmail@Example.com'
-            ref={email}
+            name='_replyTo'
           />
-          <textarea
-            className='form-control'
-            id='messageInput'
-            rows='4'
-            placeholder='Message'
-            ref={message}
-          />
-          <button
-            type='submit'
-            className='btn btn-light mx-auto'
-            style={{ display: 'block' }}
-            onClick={submitForm}
-          >
+          <textarea className='form-control' rows='4' placeholder='Message' name='message' />
+          <button type='submit' className='btn btn-light mx-auto' style={{ display: 'block' }}>
             Submit
           </button>
           <br />
