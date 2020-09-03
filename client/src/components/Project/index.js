@@ -14,6 +14,9 @@ function Project(props) {
 
   return (
     <div className='overflow-auto' id='projectContainer'>
+      <p className='lead' id='projectTitle'>
+        {currentProject.title}
+      </p>
       <div id='technologiesUsed'>
         {currentProject.technologies.map((tech, i) => (
           <div className='toolTip' key={i}>
@@ -24,7 +27,7 @@ function Project(props) {
               />
             </a>
             <span className='toolTipText'>
-              This project uses {ProjectInfo.technologies[tech].name}. Click to find out more.
+              This project uses {ProjectInfo.technologies[tech].name}
             </span>
           </div>
         ))}

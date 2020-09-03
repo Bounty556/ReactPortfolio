@@ -1,30 +1,26 @@
 #carouselHeader {
-  background-color: black;
-  
   padding: 0px;
   
   height: 128px;
   width: 100%;
 
   display: flex;
-  flex-direction: row;
   justify-content: center;
 }
 
-#carouselHeader > span {
-  align-self: center;
-  margin: 15px;
-}
-
 #carouselPips {
-  top: 102px;
-  position: absolute;
+  margin-top: -5px;
 }
 
 #carouselPips > img {
   height: 8px;
   margin: 0px 2px;
   user-select: none;
+  cursor: pointer;
+}
+
+#imageHolder {
+  margin-top: 15px;
 }
 
 #imageHolder > img {
@@ -33,16 +29,16 @@
 }
 
 #innerCarousel {
+  background-color: black;
   height: 100%;
 
-  align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 
 #innerCarousel > p {
-  color: white;
+  color: black;
   font-family: 'Roboto', cursive;
   line-height: 50%;
   margin-top: -15px;
@@ -55,9 +51,10 @@
 }
 
 .sideImage {
-  height: 64px;
+  height: 72px;
+  cursor: pointer;
 }
 
 .mainImage {
-  height: 72px;
+  height: 96px;
 }

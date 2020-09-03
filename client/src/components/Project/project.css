@@ -2,11 +2,16 @@
   display: flex;
 
   justify-content: center;
+  align-items: flex-start;
 
   height: 100%;
   width: 100%;
 
   padding: 15px;
+}
+
+#projectTitle {
+
 }
 
 #technologiesUsed {
@@ -19,9 +24,14 @@
   padding: 5px;
 }
 
+.toolTip > a > img {
+  width: 24px;
+  height: 24px;
+}
+
 .toolTip .toolTipText {
   visibility: hidden;
-  width: 240px;
+  width: 160px;
   background-color: #888;
   color: #fff;
   text-align: center;
@@ -36,7 +46,7 @@
   z-index: 1;
   top: 100%;
   left: 50%;
-  margin-left: -120px;
+  margin-left: -80px;
 }
 
 .toolTip:hover .toolTipText {

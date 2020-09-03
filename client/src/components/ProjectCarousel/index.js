@@ -41,9 +41,7 @@ function ProjectCarousel() {
   return (
     <div className='col-10' id='portfolio'>
       <div id='carouselHeader'>
-        <span className='carousel-control-prev-icon' onClick={() => goToRelativeProject(-1)} />
         <div id='innerCarousel'>
-          <p>{getRelativeProject(0).title}</p>
           <div id='imageHolder'>
             <img
               className='sideImage'
@@ -78,7 +76,6 @@ function ProjectCarousel() {
             ))}
           </div>
         </div>
-        <span className='carousel-control-next-icon' onClick={() => goToRelativeProject(1)} />
       </div>
 
       <Project project={currentProject} />
