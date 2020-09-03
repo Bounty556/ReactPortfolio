@@ -1,6 +1,44 @@
 #projectContainer {
+  display: flex;
+
+  justify-content: center;
+
   height: 100%;
   width: 100%;
 
-  word-break: break-all;
+  padding: 15px;
+}
+
+#technologiesUsed {
+  color: black;
+}
+
+.toolTip {
+  position: relative;
+  display: inline-block;
+  padding: 5px;
+}
+
+.toolTip .toolTipText {
+  visibility: hidden;
+  width: 240px;
+  background-color: #888;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  font-family: 'Roboto', cursive;
+  font-size: 12px;
+  
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -120px;
+}
+
+.toolTip:hover .toolTipText {
+  visibility: visible;
 }
