@@ -11,7 +11,12 @@ function About() {
         <Header />
         <div className='col-10' id='contentCol'>
           <div id='content'>
-            <img className='float-left' id='selfPic' src='/images/about/selfPic1.jpg' alt='Jacob Peterson' />
+            <img
+              className='float-left'
+              id='selfPic'
+              src='/images/about/selfPic1.jpg'
+              alt='Jacob Peterson'
+            />
             <p>
               My name is Jacob Peterson. I'm a 20 year old Drummer, Game Developer, and Full Stack
               Web Development Graduate from the University of Utah, near my hometown of Riverton. I
