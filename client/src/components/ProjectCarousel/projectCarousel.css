@@ -51,8 +51,9 @@
 }
 
 .sideImage {
-  height: 72px;
   cursor: pointer;
+  height: 72px;
+  opacity: 0.5;
 }
 
 .mainImage {

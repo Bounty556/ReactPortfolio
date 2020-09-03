@@ -1,9 +1,4 @@
 #projectContainer {
-  display: flex;
-
-  justify-content: center;
-  align-items: flex-start;
-
   height: 100%;
   width: 100%;
 
@@ -11,11 +6,11 @@
 }
 
 #projectTitle {
-
+  text-align: center;
 }
 
 #technologiesUsed {
-  color: black;
+  text-align: center;
 }
 
 .toolTip {

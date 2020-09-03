@@ -17,7 +17,7 @@ function Project(props) {
       <p className='lead' id='projectTitle'>
         {currentProject.title}
       </p>
-      <div id='technologiesUsed'>
+      <p id='technologiesUsed'>
         {currentProject.technologies.map((tech, i) => (
           <div className='toolTip' key={i}>
             <a href={projectInfo.technologies[tech].link} target='_blank' rel='noopener noreferrer'>
@@ -31,7 +31,7 @@ function Project(props) {
             </span>
           </div>
         ))}
-      </div>
+      </p>
     </div>
   );
 }
