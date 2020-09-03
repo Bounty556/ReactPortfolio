@@ -68,82 +68,94 @@ export default {
       date: 'March 19th, 2020',
       github: 'https://github.com/Bounty556/PasswordGenerator',
       live: 'https://bounty556.github.io/PasswordGenerator/',
-      technologies: [8]
+      technologies: [8],
+      image: 'passwordGenerator.png'
     },
     {
       title: 'Code Quiz',
       date: 'March 28th, 2020',
       github: 'https://github.com/Bounty556/CodeQuiz',
       live: 'https://bounty556.github.io/CodeQuiz/index.html',
-      technologies: [8]
+      technologies: [8],
+      image: 'codeQuiz.png'
     },
     {
       title: 'Weather Dashboard',
       date: 'April 11th, 2020',
       github: 'https://github.com/Bounty556/WeatherDashboard',
       live: 'https://bounty556.github.io/WeatherDashboard/',
-      technologies: [2, 8]
+      technologies: [2, 8],
+      image: 'weatherDashboard.png'
     },
     {
       title: 'Get Away',
       date: 'April 20th, 2020',
       github: 'https://github.com/Bounty556/GetAWay',
       live: 'https://bounty556.github.io/GetAWay/',
-      technologies: [2, 9]
+      technologies: [2, 9],
+      image: 'getAway.png'
     },
     {
       title: 'Readme Generator',
       date: 'May 16th, 2020',
       github: 'https://github.com/Bounty556/ReadmeGenerator',
-      technologies: [0]
+      technologies: [0],
+      image: 'readmeGenerator.png'
     },
     {
       title: 'Employee Summary',
       date: 'May 16th, 2020',
       github: 'https://github.com/Bounty556/EmployeeSummary',
-      technologies: [0, 10]
+      technologies: [0, 10],
+      image: 'employeeSummary.png'
     },
     {
       title: 'Work Scheduler',
       date: 'May 16th, 2020',
       github: 'https://github.com/Bounty556/Scheduler',
       live: 'https://bounty556.github.io/Scheduler/',
-      technologies: [2, 8]
+      technologies: [2, 8],
+      image: 'workScheduler.png'
     },
     {
       title: 'Poke Build',
       date: 'June 20th, 2020',
       github: 'https://github.com/Akessler314/PokE-Build',
       live: 'http://poke-build.herokuapp.com/',
-      technologies: [0, 2, 3, 4, 6, 8]
+      technologies: [0, 2, 3, 4, 6, 8],
+      image: 'pokeBuild.png',
     },
     {
       title: 'Change of Seasons',
       date: 'August 20th, 2020',
       github: 'https://github.com/Bounty556/ChangeOfSeasonsTCG',
       live: 'http://changeofseasonstcg.herokuapp.com/',
-      technologies: [0, 1, 5, 6, 7, 8]
+      technologies: [0, 1, 5, 6, 7, 8],
+      image: 'changeOfSeasons.png'
     },
     {
       title: 'Progressive Budget',
       date: 'August 25th, 2020',
       github: 'https://github.com/Bounty556/BudgetTracker',
       live: 'https://jpprogressivebudget.herokuapp.com/',
-      technologies: [0, 5, 6, 7, 11]
+      technologies: [0, 5, 6, 7, 11],
+      image: 'progressiveBudget.png'
     },
     {
       title: 'Employee Directory',
       date: 'August 30th, 2020',
       github: 'https://github.com/Bounty556/EmployeeDirectory',
       live: 'https://jpemployeedirectory.herokuapp.com/',
-      technologies: [0, 1, 5, 6, 8]
+      technologies: [0, 1, 5, 6, 8],
+      image: 'employeeDirectory.png'
     },
     {
       title: 'React Google Books',
       date: 'August 31st, 2020',
       github: 'https://github.com/Bounty556/ReactGoogleBooks',
       live: 'https://jpreactbooks.herokuapp.com/',
-      technologies: [0, 1, 6, 8]
+      technologies: [0, 1, 6, 8],
+      image: 'reactGooglebooks.png'
     }
   ]
 };

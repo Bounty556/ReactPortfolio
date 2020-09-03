@@ -1,11 +1,31 @@
 #projectContainer {
-  height: 100%;
   width: 100%;
+  
+  margin: 0px;
+  padding: 0px;
+}
 
-  padding: 15px;
+#projectColumn {
+  height: calc(100vh - 128px);
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+#projectImage {
+  text-align: center;
+}
+
+#projectImage > img {
+  max-width: 100%;
+  max-height: 356px;
+}
+
+#projectLinks {
+  text-align: center;
 }
 
 #projectTitle {
+  font-size: 24px;
   text-align: center;
 }
 
@@ -13,10 +33,14 @@
   text-align: center;
 }
 
+.logo {
+  width: 24px;
+}
+
 .toolTip {
   position: relative;
   display: inline-block;
-  padding: 5px;
+  padding: 0px 5px;
 }
 
 .toolTip > a > img {
@@ -35,7 +59,7 @@
 
   font-family: 'Roboto', cursive;
   font-size: 12px;
-  
+
   /* Position the tooltip */
   position: absolute;
   z-index: 1;

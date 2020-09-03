@@ -13,25 +13,49 @@ function Project(props) {
   }, [props.project]);
 
   return (
-    <div className='overflow-auto' id='projectContainer'>
-      <p className='lead' id='projectTitle'>
-        {currentProject.title}
-      </p>
-      <p id='technologiesUsed'>
-        {currentProject.technologies.map((tech, i) => (
-          <div className='toolTip' key={i}>
-            <a href={projectInfo.technologies[tech].link} target='_blank' rel='noopener noreferrer'>
-              <img
-                src={'/images/techIcons/' + ProjectInfo.technologies[tech].icon}
-                alt={ProjectInfo.technologies[tech].name}
-              />
-            </a>
-            <span className='toolTipText'>
-              This project uses {ProjectInfo.technologies[tech].name}
+    <div className='row' id='projectContainer'>
+      <div className='col-12' id='projectColumn'>
+        <p className='lead' id='projectTitle'>
+          {currentProject.title}
+        </p>
+        <p id='technologiesUsed'>
+          {currentProject.technologies.map((tech, i) => (
+            <span className='toolTip' key={i}>
+              <a
+                href={projectInfo.technologies[tech].link}
+                target='_blank'
+                rel='noopener noreferrer'
+              >
+                <img
+                  src={'/images/techIcons/' + ProjectInfo.technologies[tech].icon}
+                  alt={ProjectInfo.technologies[tech].name}
+                />
+              </a>
+              <span className='toolTipText'>
+                This project uses {ProjectInfo.technologies[tech].name}
+              </span>
             </span>
+          ))}
+        </p>
+        <div id='projectDescription'>
+          <p id='projectImage'>
+            <img src={'/images/projects/' + currentProject.image} alt={currentProject.title} />
+          </p>
+          <p>{currentProject.description}</p>
+          <div id='projectLinks'>
+            <a href={currentProject.github} target='_blank' rel='noopener noreferrer'>
+              <img className='logo' src='/images/logos/githubDark.png' alt='Github' />
+            </a>
+            {currentProject.live ? (
+              <a href={currentProject.live} target='_blank' rel='noopener noreferrer'>
+                <img className='logo' src='/images/logos/live.png' alt='Live Site' />
+              </a>
+            ) : (
+              <></>
+            )}
           </div>
-        ))}
-      </p>
+        </div>
+      </div>
     </div>
   );
 }

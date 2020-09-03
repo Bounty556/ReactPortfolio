@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-import Project from '../Project';
 import ProjectInfo from './projectInfo';
 
 import './projectCarousel.css';
@@ -8,12 +7,11 @@ import './projectCarousel.css';
 // Custom carousel that shows icons for the current project and the previous
 // and next projects. Has dots underneath to navigate quicker, as well as
 // next and previous buttons
-function ProjectCarousel() {
-  const [currentProject, setCurrentProject] = useState(0);
+function ProjectCarousel(props) {
   const [projects] = useState(ProjectInfo);
 
   const goToRelativeProject = delta => {
-    let tempProject = currentProject + delta;
+    let tempProject = props.project + delta;
 
     while (tempProject >= projects.length) {
       tempProject -= projects.length;
@@ -22,11 +20,11 @@ function ProjectCarousel() {
       tempProject += projects.length;
     }
 
-    setCurrentProject(tempProject);
+    props.setProject(tempProject);
   };
 
   const getRelativeProject = delta => {
-    let tempProject = currentProject + delta;
+    let tempProject = props.project + delta;
 
     while (tempProject >= projects.length) {
       tempProject -= projects.length;
@@ -39,46 +37,42 @@ function ProjectCarousel() {
   };
 
   return (
-    <div className='col-10' id='portfolio'>
-      <div id='carouselHeader'>
-        <div id='innerCarousel'>
-          <div id='imageHolder'>
+    <div className='row' id='carouselHeader'>
+      <div id='innerCarousel'>
+        <div id='imageHolder'>
+          <img
+            className='sideImage'
+            src={'/images/projectIcons/' + getRelativeProject(-1).icon}
+            alt='Previous Project'
+            onClick={() => goToRelativeProject(-1)}
+          />
+          <img
+            className='mainImage'
+            src={'/images/projectIcons/' + getRelativeProject(0).icon}
+            alt='Current Project'
+          />
+          <img
+            className='sideImage'
+            src={'/images/projectIcons/' + getRelativeProject(1).icon}
+            alt='Next Project'
+            onClick={() => goToRelativeProject(1)}
+          />
+        </div>
+        <div id='carouselPips'>
+          {projects.map((project, i) => (
             <img
-              className='sideImage'
-              src={'/images/projectIcons/' + getRelativeProject(-1).icon}
-              alt='Previous Project'
-              onClick={() => goToRelativeProject(-1)}
+              src={
+                i === props.project
+                  ? '/images/carousel/chosenPip.png'
+                  : '/images/carousel/idlePip.png'
+              }
+              onClick={() => goToRelativeProject(i - props.project)}
+              alt={'Project number ' + (i + 1)}
+              key={i}
             />
-            <img
-              className='mainImage'
-              src={'/images/projectIcons/' + getRelativeProject(0).icon}
-              alt='Current Project'
-            />
-            <img
-              className='sideImage'
-              src={'/images/projectIcons/' + getRelativeProject(1).icon}
-              alt='Next Project'
-              onClick={() => goToRelativeProject(1)}
-            />
-          </div>
-          <div id='carouselPips'>
-            {projects.map((project, i) => (
-              <img
-                src={
-                  i === currentProject
-                    ? '/images/carousel/chosenPip.png'
-                    : '/images/carousel/idlePip.png'
-                }
-                onClick={() => goToRelativeProject(i - currentProject)}
-                alt={'Project number ' + (i + 1)}
-                key={i}
-              />
-            ))}
-          </div>
+          ))}
         </div>
       </div>
-
-      <Project project={currentProject} />
     </div>
   );
 }
