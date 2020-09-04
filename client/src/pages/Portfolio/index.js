@@ -13,7 +13,7 @@ function About() {
     <div className='container' id='page'>
       <div className='row' id='mainRow'>
         <Header />
-        <div className='col-10' id='portfolioCol'>
+        <div className='col-md-12 col-lg-10' id='portfolioCol'>
           <ProjectCarousel project={currentProject} setProject={setCurrentProject} />
           <Project project={currentProject} />
         </div>

@@ -8,7 +8,7 @@ function Contact() {
     <div className='container' id='page'>
       <div className='row' id='mainRow'>
         <Header />
-        <div className='col-10'>
+        <div className='col-md-12 col-lg-10'>
           <ContactForm />
         </div>
       </div>

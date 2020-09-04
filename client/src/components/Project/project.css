@@ -27,6 +27,7 @@
 #projectTitle {
   font-size: 24px;
   text-align: center;
+  font-weight: 400;
 }
 
 #technologiesUsed {
@@ -34,7 +35,7 @@
 }
 
 .logo {
-  width: 24px;
+  width: 32px;
   margin: 0px 5px;
 }
 
@@ -45,8 +46,7 @@
 }
 
 .toolTip > a > img {
-  width: 24px;
-  height: 24px;
+  width: 32px;
 }
 
 .toolTip .toolTipText {
@@ -61,7 +61,6 @@
   font-family: 'Roboto', cursive;
   font-size: 12px;
 
-  /* Position the tooltip */
   position: absolute;
   z-index: 1;
   top: 100%;

@@ -41,18 +41,18 @@ function ProjectCarousel(props) {
       <div id='innerCarousel'>
         <div id='imageHolder'>
           <img
-            className='sideImage'
+            className='rounded sideImage'
             src={'/images/projectIcons/' + getRelativeProject(-1).icon}
             alt='Previous Project'
             onClick={() => goToRelativeProject(-1)}
           />
           <img
-            className='mainImage'
+            className='rounded mainImage'
             src={'/images/projectIcons/' + getRelativeProject(0).icon}
             alt='Current Project'
           />
           <img
-            className='sideImage'
+            className='rounded sideImage'
             src={'/images/projectIcons/' + getRelativeProject(1).icon}
             alt='Next Project'
             onClick={() => goToRelativeProject(1)}

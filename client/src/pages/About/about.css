@@ -17,10 +17,15 @@
 }
 
 @media (max-width: 991.99px) {
-  #contentCol {
-    height: auto;
+  #content {
+    max-height: calc(100vh - 195px);
   }
   
+  #contentCol {
+    height: calc(100vh - 195px);
+    display: block;
+  }
+
   #selfPic {
     width: 128px;
   }

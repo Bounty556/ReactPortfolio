@@ -47,7 +47,7 @@
 #portfolio {
   padding: 0px;
 
-  width: 100%
+  width: 100%;
 }
 
 .sideImage {
@@ -58,4 +58,10 @@
 
 .mainImage {
   height: 96px;
+}
+
+@media (max-width: 991.99px) {
+  #carouselPips {
+    display: none;
+  }
 }

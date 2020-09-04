@@ -6,7 +6,7 @@ function ContactForm() {
   return (
     <form className='h-100' action='https://formspree.io/mjvaqnay' method='POST'>
       <div className='row h-100 justify-content-center align-items-center'>
-        <div className='col-6'>
+        <div className='col-md-10 col-lg-6'>
           <div className='clearfix' id='socialLinks'>
             <a
               className='float-left'
