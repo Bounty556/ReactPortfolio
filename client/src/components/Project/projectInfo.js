@@ -134,14 +134,6 @@ export default {
       image: 'changeOfSeasons.png'
     },
     {
-      title: 'Progressive Budget',
-      date: 'August 25th, 2020',
-      github: 'https://github.com/Bounty556/BudgetTracker',
-      live: 'https://jpprogressivebudget.herokuapp.com/',
-      technologies: [0, 5, 6, 7, 11],
-      image: 'progressiveBudget.png'
-    },
-    {
       title: 'Employee Directory',
       date: 'August 30th, 2020',
       github: 'https://github.com/Bounty556/EmployeeDirectory',

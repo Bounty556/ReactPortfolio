@@ -36,10 +36,6 @@ export default [
     icon: 'changeOfSeasons.png'
   },
   {
-    title: 'Progressive Budget',
-    icon: 'progressiveBudget.png'
-  },
-  {
     title: 'Employee Directory',
     icon: 'employeeDirectory.png'
   },

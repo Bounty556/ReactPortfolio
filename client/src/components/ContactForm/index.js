@@ -39,7 +39,8 @@ function ContactForm() {
           <br />
           <p style={{ textAlign: 'center' }}>
             If you do not wish to use the form above, I can also be contacted at{' '}
-            <strong>Jacobmayday@gmail</strong>. I answer all responses within 24 hours.
+            <strong>Jacobmayday@gmail</strong>. Alternatively you can text or call me at{' '}
+            <strong>801-910-1680</strong>. I answer all written responses within 24 hours.
           </p>
         </div>
       </div>
