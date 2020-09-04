@@ -33,7 +33,7 @@ export default [
   },
   {
     title: 'Change of Seasons',
-    icon: 'changeofSeasons.png'
+    icon: 'changeOfSeasons.png'
   },
   {
     title: 'Progressive Budget',
