@@ -1,6 +1,9 @@
 #content {
   align-self: center;
   color: black;
+
+  overflow-y: auto;
+  max-height: 100vh;
 }
 
 #contentCol {
@@ -13,7 +16,11 @@
   width: 256px;
 }
 
-@media (max-width: 959px) {
+@media (max-width: 991.99px) {
+  #contentCol {
+    height: auto;
+  }
+  
   #selfPic {
     width: 128px;
   }

@@ -6,10 +6,10 @@ import './about.css';
 
 function About() {
   return (
-    <div className='container' id='page'>
-      <div className='row'>
+    <div className='container h-100' id='page'>
+      <div className='row' id='mainRow'>
         <Header />
-        <div className='col-10' id='contentCol'>
+        <div className='col-md-12 col-lg-10' id='contentCol'>
           <div id='content'>
             <img
               className='float-left'

@@ -9,3 +9,12 @@ body {
   padding: 0px 15px 0px 50px;
   max-width: 100vw;
 }
+
+@media (max-width: 991.99px) {
+  #page {
+    padding: 0px;
+  }
+  #mainRow {
+    margin: 0px;
+  }
+}

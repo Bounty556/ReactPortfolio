@@ -6,7 +6,7 @@ import Header from '../../components/Header';
 function Contact() {
   return (
     <div className='container' id='page'>
-      <div className='row'>
+      <div className='row' id='mainRow'>
         <Header />
         <div className='col-10'>
           <ContactForm />
