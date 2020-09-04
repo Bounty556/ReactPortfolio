@@ -71,3 +71,9 @@
 .toolTip:hover .toolTipText {
   visibility: visible;
 }
+
+@media (max-width: 991.99px) {
+  #projectColumn {
+    height: calc(100vh - 338px);
+  }
+}
