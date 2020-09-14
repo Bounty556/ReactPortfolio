@@ -88,14 +88,6 @@ export default {
       image: 'weatherDashboard.png'
     },
     {
-      title: 'Get Away',
-      date: 'April 20th, 2020',
-      github: 'https://github.com/Bounty556/GetAWay',
-      live: 'https://bounty556.github.io/GetAWay/',
-      technologies: [2, 9],
-      image: 'getAway.png'
-    },
-    {
       title: 'Readme Generator',
       date: 'May 16th, 2020',
       github: 'https://github.com/Bounty556/ReadmeGenerator',

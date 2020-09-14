@@ -44,11 +44,11 @@ function Project(props) {
           <p>{currentProject.description}</p>
           <div id='projectLinks'>
             <a href={currentProject.github} target='_blank' rel='noopener noreferrer'>
-              <img className='logo' src='/images/logos/githubDark.png' alt='Github' />
+              <img className='logo' src='/images/logos/githubDark.png' alt='Github' />Github Repo
             </a>
             {currentProject.live ? (
               <a href={currentProject.live} target='_blank' rel='noopener noreferrer'>
-                <img className='logo' src='/images/logos/live.png' alt='Live Site' />
+                <img className='logo' src='/images/logos/live.png' alt='Live Site' />Live Site
               </a>
             ) : (
               <></>

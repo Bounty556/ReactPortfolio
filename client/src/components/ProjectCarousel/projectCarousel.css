@@ -1,3 +1,20 @@
+#arrowLeft {
+  position: absolute;
+  width: 48px;
+  top: 24px;
+  left: 8px;
+  cursor: pointer;
+  transform: rotate(180deg);
+}
+
+#arrowRight {
+  position: absolute;
+  width: 48px;
+  top: 24px;
+  right: 8px;
+  cursor: pointer;
+}
+
 #carouselHeader {
   margin: 0px;
 
@@ -21,6 +38,7 @@
 
 #imageHolder {
   margin-top: 15px;
+  position: relative;
 }
 
 #imageHolder > img {

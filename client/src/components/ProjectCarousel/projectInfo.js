@@ -12,10 +12,6 @@ export default [
     icon: 'weatherDashboard.png'
   },
   {
-    title: 'Get Away',
-    icon: 'getAway.png'
-  },
-  {
     title: 'Readme Generator',
     icon: 'readmeGenerator.png'
   },
