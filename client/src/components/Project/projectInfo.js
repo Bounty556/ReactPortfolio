@@ -147,7 +147,7 @@ export default {
       github: 'https://github.com/Bounty556/ReactGoogleBooks',
       live: 'https://jpreactbooks.herokuapp.com/',
       technologies: [0, 1, 6, 8],
-      image: 'reactGooglebooks.png'
+      image: 'reactGoogleBooks.png'
     }
   ]
 };

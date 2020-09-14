@@ -17,7 +17,7 @@ function About() {
               src='/images/about/selfPic1.jpg'
               alt='Jacob Peterson'
             />
-            <p>
+            <p id='aboutParagraph'>
               My name is Jacob Peterson. I'm a 20 year old Drummer, Game Developer, and Full Stack
               Web Development Graduate from the University of Utah, near my hometown of Riverton. I
               tend to spend most of my time programming, whether it's working on a game engine,
