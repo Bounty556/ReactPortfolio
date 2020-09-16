@@ -29,8 +29,4 @@
     height: calc(100vh - 195px);
     display: block;
   }
-
-  #selfPic {
-    width: 128px;
-  }
 }
