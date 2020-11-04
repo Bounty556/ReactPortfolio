@@ -1,20 +1,3 @@
-#arrowLeft {
-  position: absolute;
-  width: 48px;
-  top: 24px;
-  left: 8px;
-  cursor: pointer;
-  transform: rotate(180deg);
-}
-
-#arrowRight {
-  position: absolute;
-  width: 48px;
-  top: 24px;
-  right: 8px;
-  cursor: pointer;
-}
-
 #carouselHeader {
   margin: 0px;
 
@@ -27,10 +10,12 @@
 
 #carouselPips {
   margin-top: -5px;
+  margin-left: 5px;
+  margin-right: 5px;
 }
 
 #carouselPips > img {
-  height: 8px;
+  height: 5px;
   margin: 0px 2px;
   user-select: none;
   cursor: pointer;

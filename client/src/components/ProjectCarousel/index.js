@@ -47,12 +47,6 @@ function ProjectCarousel(props) {
             onClick={() => goToRelativeProject(-1)}
           />
           <img
-            id='arrowLeft'
-            src={'/images/carousel/arrow.png'}
-            alt='Previous Project'
-            onClick={() => goToRelativeProject(-1)}
-          />
-          <img
             className='rounded mainImage'
             src={'/images/projectIcons/' + getRelativeProject(0).icon}
             alt='Current Project'
@@ -60,12 +54,6 @@ function ProjectCarousel(props) {
           <img
             className='rounded sideImage'
             src={'/images/projectIcons/' + getRelativeProject(1).icon}
-            alt='Next Project'
-            onClick={() => goToRelativeProject(1)}
-          />
-          <img
-            id='arrowRight'
-            src={'/images/carousel/arrow.png'}
             alt='Next Project'
             onClick={() => goToRelativeProject(1)}
           />
