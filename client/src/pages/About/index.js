@@ -18,11 +18,10 @@ function About() {
               alt='Jacob Peterson'
             />
             <p id='aboutParagraph'>
-              My name is Jacob Peterson. I'm a 20 year old Drummer, Game Developer, and Full Stack
+              My name is Jacob Peterson. I'm a 21 year old Drummer, Hobbyist Game Developer, and Full Stack
               Web Development Graduate from the University of Utah, near my hometown of Riverton. I
-              tend to spend most of my time programming, whether it's working on a game engine,
-              testing out new website designs, or working with my friends on the card game we wrote
-              for our final project, Change of Seasons.
+              tend to spend most of my time programming, whether that's working on a game engine or
+              testing out new website designs.
               <br /> <br />
               Outside of developing I love surrounding myself with music, generally by playing the
               drums with my friend who plays guitar or covering songs by myself.
